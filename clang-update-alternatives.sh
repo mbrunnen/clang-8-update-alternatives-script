@@ -88,54 +88,56 @@ sudo update-alternatives \
 
 # clang
 sudo update-alternatives \
-    --install   /usr/bin/clang                      clang                       "/usr/bin/clang-$version"                       "$priority"     \
-    --slave     /usr/bin/clang++                    clang++                     "/usr/bin/clang++-$version"                                     \
-    --slave     /usr/bin/clang-apply-replacements   clang-apply-replacements    "/usr/bin/clang-apply-replacements-$version"                    \
-    --slave     /usr/bin/clang-change-namespace     clang-change-namespace      "/usr/bin/clang-change-namespace-$version"                      \
-    --slave     /usr/bin/clang-check                clang-check                 "/usr/bin/clang-check-$version"                                 \
-    --slave     /usr/bin/clang-cl                   clang-cl                    "/usr/bin/clang-cl-$version"                                    \
-    --slave     /usr/bin/clang-cpp                  clang-cpp                   "/usr/bin/clang-cpp-$version"                                   \
-    --slave     /usr/bin/clangd                     clangd                      "/usr/bin/clangd-$version"                                      \
-    --slave     /usr/bin/clang-extdef-mapping       clang-extdef-mapping        "/usr/bin/clang-extdef-mapping-$version"                        \
-    --slave     /usr/bin/clang-format               clang-format                "/usr/bin/clang-format-$version"                                \
-    --slave     /usr/bin/clang-format-diff          clang-format-diff           "/usr/bin/clang-format-diff-$version"                           \
-    --slave     /usr/bin/clang-import-test          clang-import-test           "/usr/bin/clang-import-test-$version"                           \
-    --slave     /usr/bin/clang-include-fixer        clang-include-fixer         "/usr/bin/clang-include-fixer-$version"                         \
-    --slave     /usr/bin/clang-offload-bundler      clang-offload-bundler       "/usr/bin/clang-offload-bundler-$version"                       \
-    --slave     /usr/bin/clang-query                clang-query                 "/usr/bin/clang-query-$version"                                 \
-    --slave     /usr/bin/clang-refactor             clang-refactor              "/usr/bin/clang-refactor-$version"                              \
-    --slave     /usr/bin/clang-rename               clang-rename                "/usr/bin/clang-rename-$version"                                \
-    --slave     /usr/bin/clang-reorder-fields       clang-reorder-fields        "/usr/bin/clang-reorder-fields-$version"                        \
-    --slave     /usr/bin/scan-view                  scan-view                   "/usr/bin/scan-view-$version"                                   \
-    --slave     /usr/bin/scan-build                 scan-build                  "/usr/bin/scan-build-$version"                                  \
-    --slave     /usr/bin/scan-build-py              scan-build-py               "/usr/bin/scan-build-py-$version"                               \
-    --slave     /usr/bin/bugpoint                   bugpoint                    "/usr/bin/bugpoint-$version"                                    \
-    --slave     /usr/bin/c-index-test               c-index-test                "/usr/bin/c-index-test-$version"                                \
-    --slave     /usr/bin/diagtool                   diagtool                    "/usr/bin/diagtool-$version"                                    \
-    --slave     /usr/bin/find-all-symbols           find-all-symbols            "/usr/bin/find-all-symbols-$version"                            \
-    --slave     /usr/bin/git-clang-format           git-clang-format            "/usr/bin/git-clang-format-$version"                            \
-    --slave     /usr/bin/hmaptool                   hmaptool                    "/usr/bin/hmaptool-$version"                                    \
-    --slave     /usr/bin/modularize                 modularize                  "/usr/bin/modularize-$version"                                  \
-    --slave     /usr/bin/obj2yaml                   obj2yaml                    "/usr/bin/obj2yaml-$version"                                    \
-    --slave     /usr/bin/opt                        opt                         "/usr/bin/opt-$version"                                         \
-    --slave     /usr/bin/sancov                     sancov                      "/usr/bin/sancov-$version"                                      \
-    --slave     /usr/bin/sanstats                   sanstats                    "/usr/bin/sanstats-$version"                                    \
-    --slave     /usr/bin/verify-uselistorder        verify-uselistorder         "/usr/bin/verify-uselistorder-$version"                         \
-    --slave     /usr/bin/wasm-ld                    wasm-ld                     "/usr/bin/wasm-ld-$version"                                     \
-    --slave     /usr/bin/yaml2obj                   yaml2obj                    "/usr/bin/yaml2obj-$version"                                    \
-    --slave     /usr/bin/yaml-bench                 yaml-bench                  "/usr/bin/yaml-bench-$version"                                  \
-    --slave     /usr/bin/lld                        lld                         "/usr/bin/lld-$version"                                         \
-    --slave     /usr/bin/lld-link                   lld-link                    "/usr/bin/lld-link-$version"                                    \
-    --slave     /usr/bin/lli-child-target           lli-child-target            "/usr/bin/lli-child-target-$version"                            \
-    --slave     /usr/bin/lli                        lli                         "/usr/bin/lli-$version"                                         \
-    --slave     /usr/bin/lldb                       lldb                        "/usr/bin/lldb-$version"                                        \
-    --slave     /usr/bin/lldb-argdumper             lldb-argdumper              "/usr/bin/lldb-argdumper-$version"                              \
-    --slave     /usr/bin/lldb-mi                    lldb-mi                     "/usr/bin/lldb-mi-$version"                                     \
-    --slave     /usr/bin/lldb-server                lldb-server                 "/usr/bin/lldb-server-$version"                                 \
-    --slave     /usr/bin/lldb-test                  lldb-test                   "/usr/bin/lldb-test-$version"                                   \
-    --slave     /usr/bin/lldb-vscode                lldb-vscode                 "/usr/bin/lldb-vscode-$version"                                 \
-    --slave     /usr/share/man/man1/clang.1.gz      clang.1.gz                  "/usr/share/man/man1/clang-$version.1.gz"                       \
-    --slave     /usr/share/man/man1/clangd-1.gz     clangd.1.gz                 "/usr/share/man/man1/clangd-$version.1.gz"
+    --install   /usr/bin/clang                                  clang                       "/usr/bin/clang-$version"                       "$priority"     \
+    --slave     /usr/bin/clang++                                clang++                     "/usr/bin/clang++-$version"                                     \
+    --slave     /usr/bin/clang-apply-replacements               clang-apply-replacements    "/usr/bin/clang-apply-replacements-$version"                    \
+    --slave     /usr/bin/clang-change-namespace                 clang-change-namespace      "/usr/bin/clang-change-namespace-$version"                      \
+    --slave     /usr/bin/clang-check                            clang-check                 "/usr/bin/clang-check-$version"                                 \
+    --slave     /usr/bin/clang-cl                               clang-cl                    "/usr/bin/clang-cl-$version"                                    \
+    --slave     /usr/bin/clang-cpp                              clang-cpp                   "/usr/bin/clang-cpp-$version"                                   \
+    --slave     /usr/bin/clangd                                 clangd                      "/usr/bin/clangd-$version"                                      \
+    --slave     /usr/bin/clang-extdef-mapping                   clang-extdef-mapping        "/usr/bin/clang-extdef-mapping-$version"                        \
+    --slave     /usr/bin/clang-format                           clang-format                "/usr/bin/clang-format-$version"                                \
+    --slave     /usr/bin/clang-format-diff                      clang-format-diff           "/usr/bin/clang-format-diff-$version"                           \
+    --slave     /usr/bin/clang-import-test                      clang-import-test           "/usr/bin/clang-import-test-$version"                           \
+    --slave     /usr/bin/clang-include-fixer                    clang-include-fixer         "/usr/bin/clang-include-fixer-$version"                         \
+    --slave     /usr/bin/clang-offload-bundler                  clang-offload-bundler       "/usr/bin/clang-offload-bundler-$version"                       \
+    --slave     /usr/bin/clang-query                            clang-query                 "/usr/bin/clang-query-$version"                                 \
+    --slave     /usr/bin/clang-refactor                         clang-refactor              "/usr/bin/clang-refactor-$version"                              \
+    --slave     /usr/bin/clang-rename                           clang-rename                "/usr/bin/clang-rename-$version"                                \
+    --slave     /usr/bin/clang-reorder-fields                   clang-reorder-fields        "/usr/bin/clang-reorder-fields-$version"                        \
+    --slave     /usr/bin/scan-view                              scan-view                   "/usr/bin/scan-view-$version"                                   \
+    --slave     /usr/bin/scan-build                             scan-build                  "/usr/bin/scan-build-$version"                                  \
+    --slave     /usr/bin/scan-build-py                          scan-build-py               "/usr/bin/scan-build-py-$version"                               \
+    --slave     /usr/bin/bugpoint                               bugpoint                    "/usr/bin/bugpoint-$version"                                    \
+    --slave     /usr/bin/c-index-test                           c-index-test                "/usr/bin/c-index-test-$version"                                \
+    --slave     /usr/bin/diagtool                               diagtool                    "/usr/bin/diagtool-$version"                                    \
+    --slave     /usr/bin/find-all-symbols                       find-all-symbols            "/usr/bin/find-all-symbols-$version"                            \
+    --slave     /usr/bin/git-clang-format                       git-clang-format            "/usr/bin/git-clang-format-$version"                            \
+    --slave     /usr/bin/hmaptool                               hmaptool                    "/usr/bin/hmaptool-$version"                                    \
+    --slave     /usr/bin/modularize                             modularize                  "/usr/bin/modularize-$version"                                  \
+    --slave     /usr/bin/obj2yaml                               obj2yaml                    "/usr/bin/obj2yaml-$version"                                    \
+    --slave     /usr/bin/opt                                    opt                         "/usr/bin/opt-$version"                                         \
+    --slave     /usr/bin/sancov                                 sancov                      "/usr/bin/sancov-$version"                                      \
+    --slave     /usr/bin/sanstats                               sanstats                    "/usr/bin/sanstats-$version"                                    \
+    --slave     /usr/bin/verify-uselistorder                    verify-uselistorder         "/usr/bin/verify-uselistorder-$version"                         \
+    --slave     /usr/bin/wasm-ld                                wasm-ld                     "/usr/bin/wasm-ld-$version"                                     \
+    --slave     /usr/bin/yaml2obj                               yaml2obj                    "/usr/bin/yaml2obj-$version"                                    \
+    --slave     /usr/bin/yaml-bench                             yaml-bench                  "/usr/bin/yaml-bench-$version"                                  \
+    --slave     /usr/bin/lld                                    lld                         "/usr/bin/lld-$version"                                         \
+    --slave     /usr/bin/lld-link                               lld-link                    "/usr/bin/lld-link-$version"                                    \
+    --slave     /usr/bin/lli-child-target                       lli-child-target            "/usr/bin/lli-child-target-$version"                            \
+    --slave     /usr/bin/lli                                    lli                         "/usr/bin/lli-$version"                                         \
+    --slave     /usr/bin/lldb                                   lldb                        "/usr/bin/lldb-$version"                                        \
+    --slave     /usr/bin/lldb-argdumper                         lldb-argdumper              "/usr/bin/lldb-argdumper-$version"                              \
+    --slave     /usr/bin/lldb-mi                                lldb-mi                     "/usr/bin/lldb-mi-$version"                                     \
+    --slave     /usr/bin/lldb-server                            lldb-server                 "/usr/bin/lldb-server-$version"                                 \
+    --slave     /usr/bin/lldb-test                              lldb-test                   "/usr/bin/lldb-test-$version"                                   \
+    --slave     /usr/bin/lldb-vscode                            lldb-vscode                 "/usr/bin/lldb-vscode-$version"                                 \
+    --slave     /usr/share/man/man1/clang.1.gz                  clang.1.gz                  "/usr/share/man/man1/clang-$version.1.gz"                       \
+    --slave     /usr/share/man/man1/clangd-1.gz                 clangd.1.gz                 "/usr/share/man/man1/clangd-$version.1.gz"                      \
+    --slave     /usr/share/man/man1/clang-format.1.gz           clang-format.1.gz           "/usr/share/man/man1/clang-format-$version.1.gz"                \
+    --slave     /usr/share/man/man1/clang-format-diff.1.gz      clang-format-diff.1.gz      "/usr/share/man/man1/clang-format-diff-$version.1.gz"
 
 # make system default
 sudo update-alternatives --install /usr/bin/cc  cc  /usr/bin/clang      100
