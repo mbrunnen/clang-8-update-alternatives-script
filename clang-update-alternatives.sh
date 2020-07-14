@@ -134,7 +134,8 @@ sudo update-alternatives \
     --slave     /usr/bin/lldb-server                lldb-server                 "/usr/bin/lldb-server-$version"                                 \
     --slave     /usr/bin/lldb-test                  lldb-test                   "/usr/bin/lldb-test-$version"                                   \
     --slave     /usr/bin/lldb-vscode                lldb-vscode                 "/usr/bin/lldb-vscode-$version"                                 \
-    --slave     /usr/share/man/man1/clang.1.gz      clang.1.gz                  "/usr/share/man/man1/clang-$version.1.gz"
+    --slave     /usr/share/man/man1/clang.1.gz      clang.1.gz                  "/usr/share/man/man1/clang-$version.1.gz"                       \
+    --slave     /usr/share/man/man1/clangd-1.gz     clangd.1.gz                 "/usr/share/man/man1/clangd-$version.1.gz"
 
 # make system default
 sudo update-alternatives --install /usr/bin/cc  cc  /usr/bin/clang      100
