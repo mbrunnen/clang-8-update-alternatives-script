@@ -9,6 +9,30 @@ set -eu
 version=${1:-8}
 priority=${2:-20}
 
+sudo apt update
+sudo apt install --assume-yes \
+    "clang-$version" \
+    "clang-$version-doc" \
+    "clang-format-$version" \
+    "clang-tools-$version" \
+    "clangd-$version" \
+    "libc++-$version-dev" \
+    "libc++abi-$version-dev" \
+    "libclang-$version-dev" \
+    "libclang-common-$version-dev" \
+    "libclang1-$version" \
+    "libfuzzer-$version-dev" \
+    "libllvm$version" \
+    "libllvm-$version-ocaml-dev" \
+    "lld-$version" \
+    "lldb-$version" \
+    "llvm-$version" \
+    "llvm-$version-dev" \
+    "llvm-$version-doc" \
+    "llvm-$version-examples" \
+    "llvm-$version-runtime" \
+    "python-clang-$version"
+
 # llvm
 sudo update-alternatives \
     --install   /usr/lib/llvm                       llvm                        "/usr/lib/llvm-$version"                        "$priority"     \
